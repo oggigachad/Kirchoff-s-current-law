@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kirchhoff's Current Law Model</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: row; align-items: flex-start; justify-content: center; }
+        #controls { margin-right: 20px; }
+        #canvasContainer { position: relative; }
+        #canvas { border: 1px solid black; width: 1200px; height: 800px; }
+        label { display: block; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h1>Kirchhoff's Current Law Model</h1>
+        <label for="numCurrents">Number of Currents: <input type="number" id="numCurrents" value="5" step="1" min="1" max="10" onchange="setupCurrents()"></label>
+        <div id="currentInputs"></div>
+        <h2>Output:</h2>
+        <p id="output"></p>
+    </div>
+    <div id="canvasContainer">
+        <canvas id="canvas" resize></canvas>
+    </div>
+    <script src="kcl.js"></script>
+</body>
+</html>
